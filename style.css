@@ -23,7 +23,11 @@
     width: 500px;
     overflow: hidden;
     text-align: center;
+position: relative;
+  
  }
+
+
  /* Form */
  form {
    display: grid;
@@ -83,6 +87,9 @@
    padding: 15px;
    border-radius: 50%;
    /* color: #fff; */
+   position: absolute;
+   right: 10%;
+   top: 40%;
 }
 
 #arrow:hover {
@@ -90,11 +97,35 @@
 }
 
 .output {
+   padding-top: 80px;
    font-size: 32px;
-   font-weight: bold;
+   font-weight: 800;
+   font-style: italic;
    color: hsl(0, 0%, 8%);
+   text-align: left;
+   padding-left: 15%;
 }
 
-.output small {
+.output span {
    color: hsl(259, 100%, 65%);
+   font-weight: 700;
+
 }
+
+@media(max-width: 768px) {
+   #container {
+      width: 500px;
+      text-align: center;
+   }
+
+   #arrow {
+      position: fixed;
+      right: 50%;
+    }
+    
+    .output {
+      /* text-align: center; */
+      padding-left: 30%;
+      /* padding-right: 15%; */
+    }
+ }
